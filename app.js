@@ -5,7 +5,7 @@ const cfenv = require('cfenv');
 var app  =  express(); 
 var appEnv = cfenv.getAppEnv();
 var url = process.env.url
-app.set('port', (process.env.PORT || 9981))
+app.set('port', (process.env.PORT || 3000))
 app.use(express.static(__dirname + '/images'))
 
 
@@ -75,7 +75,7 @@ app.get('/redirect', function(req, res) {
     
  
     app.listen(app.get('port'), function() {
-        console.log("Node JS app is running at http://3.128.246.40" + app.get('9981') +"/acadalearning");
+        console.log("Node JS app is running at http://3.128.246.40" + app.get('3000') +"/acadalearning");
       })
     
 
